@@ -1,0 +1,17 @@
+# use glob syntax.
+syntax: glob
+*.aux
+*.bcf
+*.log
+*.out
+*.thm
+*.toc
+*.backup
+*.pdf
+*.bbl
+*.blg
+*.run.xml
+latexout
+date.tex
+hash.tex
+qr/*.svg
