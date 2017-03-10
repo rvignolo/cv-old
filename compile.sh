@@ -52,6 +52,8 @@ for language in english spanish; do
   cp rvignolo-${language}.pdf rvignolo-${language}-${version}${delta}.pdf
 done
 
+tput setaf 4
 echo
 echo result saved as rvignolo-english-${version}${delta}.pdf
 echo result saved as rvignolo-spanish-${version}${delta}.pdf
+tput sgr0
