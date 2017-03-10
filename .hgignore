@@ -15,3 +15,6 @@ syntax: glob
 date.tex
 hash.tex
 qr/*.svg
+# particularmente
+informes-english.tex
+informes-spanish.tex
