@@ -8,6 +8,13 @@ for i in ${tools}; do
   fi
 done
 
+# definiciones utiles
+out="latexout"
+version=`hg log -r tip --template '{rev}-{date|shortdate}'`
+if [ ! -z "`hg status`" ]; then
+  delta="+"
+fi
+
 function callxelatex {
   while [[ ! -e $1-${out} ]] || [[ ! -z "`grep -i rerun $1-${out} | grep -v sty | grep -v biblatex`" ]]; do
     xelatex -shell-escape rvignolo-$1 | tee $1-${out}
@@ -38,13 +45,6 @@ cd ..
 cd qr
 ./qr.sh
 cd ..
-
-# definiciones utiles
-out="latexout"
-version=`hg log -r tip --template '{rev}-{date|shortdate}'`
-if [ ! -z "`hg status`" ]; then
-  delta="+"
-fi
 
 for language in english spanish; do
   rm -f ${language}-${out}
