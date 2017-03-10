@@ -11,7 +11,7 @@ syntax: glob
 *.bbl
 *.blg
 *.run.xml
-latexout
+*latexout
 date.tex
 hash.tex
 qr/*.svg
