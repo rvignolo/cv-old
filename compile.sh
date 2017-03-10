@@ -25,6 +25,10 @@ function callbiber {
 # limpiamos el directorio
 ./clean.sh
 
+# generamos archivos utiles
+./report2latex.awk informes-tecnicos-english.bib > informes-english.tex
+./report2latex.awk informes-tecnicos-spanish.bib > informes-spanish.tex
+
 # convertimos los svg
 cd logos
 ../svg2pdf.sh
@@ -48,6 +52,8 @@ for language in english spanish; do
   callxelatex ${language}
   callbiber ${language}
   callxelatex ${language}
+  
+  rm -f informes-${language}.tex
   
   cp rvignolo-${language}.pdf rvignolo-${language}-${version}${delta}.pdf
 done

@@ -9,6 +9,9 @@ rm -f *latexout
 
 rm -f *.pdf
 
+rm -f informes-english.tex
+rm -f informes-spanish.tex
+
 cd logos
 rm -f *.pdf
 cd ..
