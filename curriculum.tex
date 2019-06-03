@@ -1,24 +1,10 @@
 \usepackage[a4paper,bottom=3cm,top=2.5cm,foot=1.5cm,left=1.75cm,right=1.75cm]{geometry}
 
-\usepackage{ifxetex}
-\ifxetex
- \usepackage{fontspec}
-  \setmainfont[Mapping=tex-text, Ligatures=TeX]{TeX Gyre Pagella}
-%   \setmainfont[Mapping=tex-text]{LinLibertineO}
-\setsansfont[Scale=MatchLowercase]{Latin Modern Sans}
-% \setsansfont[Scale=MatchLowercase]{Linux Biolinum O}
-% \setsansfont[Scale=MatchLowercase]{Carlito}
-
-% consolas no es free pero tiene bold, inconsolata es al vesre
-% \setmonofont[Scale=MatchLowercase]{Inconsolata}
-% \setmonofont[Scale=MatchLowercase]{Consolas}
+\usepackage{fontspec}
+\setmainfont[Mapping=tex-text]{LinLibertineO}
+\newfontfamily\ipa{LinLibertineO}
+\setsansfont[Scale=MatchLowercase]{Carlito}
 \setmonofont[Scale=MatchLowercase]{DejaVu Sans Mono}
-% \setmonofont[SmallCapsFont={Latin Modern Mono Caps}]{Latin Modern Mono Light}
-\else
- \usepackage[utf8]{inputenc}
- \usepackage{palatino}
-%  \usepackage{berasans}
-\fi
 
 \usepackage{url}
 \usepackage{graphicx}
@@ -52,8 +38,6 @@
 
 % numero de pagina
 \fancyfoot[R]{\oldstylenums{\thepage}/\oldstylenums{\pageref{LastPage}}\quad\quad}
-
-
 
 \usepackage{hyperref}
 \hypersetup{pdftitle={Ramiro Vignolo--Curriculum Vitae}, pdfauthor={Ramiro Vignolo}, pdfkeywords={}, pdfborder={0 0 0}}
@@ -98,7 +82,10 @@
 
 \newcommand{\personalfield}[2]{
 \hspace{\chico}\gris{#1}
-\par
+
+\smallskip
+% \par
+
 \hspace{\grande}{#2}
 }
 
@@ -178,7 +165,7 @@
 \newcommand{\titulo}[1]{
 \thispagestyle{empty}
 \begin{center}
-\textcolor{azul}{\Huge{\textbf{\textsf{#1}}}}\\
+\textcolor{azul}{\Huge{\textbf{#1}}}\\
 \vspace{0.1cm plus 0.05cm minus 0.05cm}
 \textcolor{gris}{\Large{\textsc{Curriculum Vit\ae}}}
 \end{center}

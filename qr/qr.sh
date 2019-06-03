@@ -26,8 +26,9 @@ encode aatn-2016-1-pres  https://bitbucket.org/rvignolo/aatn-2016-xs-multitabla-
 encode aatn-2016-2-pres  https://bitbucket.org/rvignolo/aatn-2016-appl-multi-xs-presentacion            ${azul}
 encode aatn-2016-3-pres  https://bitbucket.org/rvignolo/aatn-2016-moc-milonga-presentacion              ${magenta}
 
-encode wasora       https://bitbucket.org/seamplex/wasora                                               ${magenta}
+encode wasora       https://github.com/seamplex/wasora                                                  ${magenta}
 encode milonga      https://bitbucket.org/rvignolo/milonga                                              ${azul}
-encode mate         https://bitbucket.org/besna/mate-plugin                                             ${magenta}
+encode mate         https://github.com/rvignolo/mate                                                    ${magenta}
+encode kosmos       https://github.com/rvignolo/kosmos                                                  ${azul}
 
 ../svg2pdf.sh

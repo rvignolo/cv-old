@@ -1,5 +1,14 @@
 \documentclass{article}
-\usepackage[english]{babel}
+% \usepackage[english]{babel}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+
+\usepackage{fontspec}
+\setmainfont[Mapping=tex-text]{LinLibertineO}
+\newfontfamily\ipa{LinLibertineO}
+\setsansfont[Scale=MatchLowercase]{Carlito}
+\setmonofont[Scale=MatchLowercase]{DejaVu Sans Mono}
 
 \input{curriculum}
 
@@ -15,14 +24,14 @@
 
 \begin{minipage}{0.3\linewidth}
 \personalfield{Name}{Ramiro Vignolo}
-\par\vspace{\chico}
-\personalfield{Place and Date of birth}{\formatdate{14}{12}{1990}}
-\personalfield{}{Córdoba, Argentina}
-\par\vspace{\chico}
+
+\personalfield{Date of birth}{\formatdate{14}{12}{1990}}
+
+\personalfield{Place of birth}{Córdoba, Argentina}
+
 \personalfield{Passport}{AAC084659}
-\par\vspace{\chico}
+
 \personalfield{Civil Status}{Single}
-\vspace{1cm}
 \end{minipage}
 \begin{minipage}{0.4\linewidth}
 
@@ -35,21 +44,20 @@
 
 \textsf{Ramiro Vignolo}
 \par
-\textsf{Senior Quant Analyst}
+\textsf{Senior Quantitative Analyst}\\
+
+\medskip
+
+Av. Del Libertador 174\\
+Vicente López, Buenos Aires\\
+Argentina
 \end{center}
 
-\smallskip
-
-\hspace{1.25cm}
-\begin{minipage}{7cm}
-Zabala 1655/57, 6th floor\\
-Belgrano, Buenos Aires\\
-Argentina
-\end{minipage}
+% \smallskip
 
 \begin{center}
 +54 9 11 6482 4868\\
-\textcolor{azul}{\texttt{ramirovignolo@gmail.com}}\\
+\textcolor{azul}{\texttt{ramirovignolo@googlemail.com}}\\
 
 % +54 11 4500 1416 \\
 % \textcolor{azul}{\texttt{ramiro.vignolo@crisil.com}}
@@ -60,31 +68,185 @@ Argentina
 \begin{center}\includegraphics[width=3.5cm]{photo-cv-1.jpg}\end{center}
 \end{minipage}
 
-\vspace{1cm plus \grande minus \grande}
+% \vspace{1cm plus \grande minus \grande}
 
 % -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \begin{secciontrescol}{Academic Formation}
 
 \filatresentres{2014}{%
-\emph{Nuclear Engineer}
+\emph{MSc Nuclear Engineering}
 
-Balseiro Institute, Cuyo National University \emph{\&} National Atomic Energy Commission. San Carlos de Bariloche.\\
-Thesis: \href{http://ricabib.cab.cnea.gov.ar/467/}{\emph{Conceptual Design of a Compact Nuclear Research Reactor Core.}}\\
-Advisors: PhD.~Eduardo Villarino and Eng.~Daniel Hergenreder.\\
-Host: INVAP S.E. Nuclear Engineering Department\\
+Balseiro Institute, Cuyo National University \& National Atomic Energy Commission. San Carlos de Bariloche, Argentina.\\
 GPA: 8.40/10.
-}{\href{http://www.ib.edu.ar/index.php/english-version.html}{\includegraphics[width=0.8cm]{logos/ib}}}{-0.6cm}
+}{\href{http://www.ib.edu.ar/english_version/Instituto_Balseiro.php}{\includegraphics[width=0.8cm]{logos/ib}}}{-0.6cm}
 
 \filasep
 
-\filadosentres{2011}{%
+\filatresentres{2011}{%
 Completed the first two years of Aeronautical Engineering.\\
-National Technological University, Haedo Regional Faculty.\\
+National Technological University, Haedo Regional Faculty. Buenos Aires, Argentina.\\
 GPA: 9.20/10.
+}{\href{https://www.utn.edu.ar/es/}{\includegraphics[width=0.8cm]{logos/utn}}}{-0.6cm}
+
+\end{secciontrescol}
+
+% \begin{secciondoscol}{Professional skills}
+%  \filadosendos{}{Experience in mathematical modelling, numerical simulation and programming applied in both open source and proprietary software.}
+% \end{secciondoscol}
+
+% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{secciontrescol}{Professional Experience}
+
+\filatresentres{\scriptsize 2017 -- Current}{%
+\azul{CRISIL}, Buenos Aires, Argentina \& New York, United States of America\\
+\emph{Senior Quantitative Analyst}
+}{\href{https://www.crisil.com}{\includegraphics[width=0.9cm]{logos/crisil}}}{-0.6cm}
+
+\filadosentres{}{
+\begin{tabular}{rp{\anchoparrafo}}
+ \textbf{Group}    & CRISIL Research \& Development \\
+ \textbf{Location} & Buenos Aires, Argentina \\
+ \textbf{Period}   & 2019 -- Current \\
+\end{tabular}}%
+\nopagebreak%
+
+\filadosentres{}{%
+\begin{itemize}
+ \item Design, development, and coding of a derivative pricing engine using high-quality standards.
+ \item Monte Carlo Methods for Stochastic Differential Equations following Peter E. Kloeden and Eckhard Platen book theory.
+%  \item Interest Rate Modeling including Term Structure Models such as affine Short Rate models following Andersen .
+ \item Interest Rate Modeling following both Leif B.G. Andersen, Vladimir V. Piterbarg and Damiano Brigo, Fabio Mercurio books theory.
+\end{itemize}
+}
+
+\filadosentres{}{
+\begin{tabular}{rp{\anchoparrafo}}
+ \textbf{Client}   & Tier-1 US Bank -- Model Validation Group \\
+ \textbf{Location} & New York, United States of America \\
+ \textbf{Period}   & 2018 -- 2019 \\
+\end{tabular}}%
+\nopagebreak%
+
+\filadosentres{}{%
+\begin{itemize}
+ \item Development of plausible future forecasts for macroeconomic and market variables in the context of Current Expected Credit Loss (CECL) models.
+ \item Design, development, and maintenance of a forecasting suite implementing several methodologies in R.
+\end{itemize}
+}
+
+\filadosentres{}{
+\begin{tabular}{rp{\anchoparrafo}}
+ \textbf{Client}   & Tier-1 US Bank -- Equity and Hybrids Group \\
+ \textbf{Location} & Buenos Aires, Argentina \\
+ \textbf{Period}   & 2017 -- 2018 \\
+\end{tabular}}%
+\nopagebreak%
+
+\filadosentres{}{%
+\begin{itemize}
+ \item Price and risk management of Equity and Hybrid (IR/FX/COMM) exotic financial derivatives.
+ \item Scrutiny of pricing methodology, model soundness and test suite design.
+ \item Execution of calibration, benchmarking, computational performance, hedging, limiting cases, stability and convergence tests. CCAR stress testing and PAA explains.
+ \item Responsible for technical documentation and executive summary report.
+\end{itemize}
+}
+
+% \filasep
+
+\filatresentres{2017 -- 2018}{%
+\azul{BESNA}, Buenos Aires, Argentina\\
+\emph{Engineering Consultant}
+}{\href{http://www.besna.com.ar}{\includegraphics[width=0.8cm]{logos/besna}}}{-0.6cm}
+
+\filadosentres{}{
+\begin{tabular}{rp{\anchoparrafo}}
+ \textbf{Client}   & National Atomic Energy Commission (CNEA) \\
+ \textbf{Project}  & Numerical Simulation of the CAREM-25 Steam Generator \\
+ \textbf{Location} & Buenos Aires, Argentina \\
+ \textbf{Period}   & 2017 -- 2018 \\
+\end{tabular}}%
+\nopagebreak%
+
+\filadosentres{}{%
+\begin{itemize}
+ \item Design and development of Heat Transfer – Two-Phase Flow calculation codes for Nuclear Reactors.
+\end{itemize}
+}
+
+% \filasep
+
+\filatresentres{2014 -- 2017}{%
+\azul{TECNA} Engineering Studies and Projects, Buenos Aires, Argentina \\
+\emph{S/Sr Nuclear Engineer}
+}{\href{http://www.tecna.com/Home/tabid/40/language/en-US/Default.aspx}{\includegraphics[width=0.8cm]{logos/tecna-solo}}}{-0.6cm}
+
+\filadosentres{}{
+\begin{tabular}{rp{\anchoparrafo}}
+ \textbf{Client}   & National Atomic Energy Commission (CNEA) \\
+ \textbf{Project}  & CAREM-25 Balance of Plant \\
+ \textbf{Location} & Buenos Aires, Argentina \\
+ \textbf{Period}   & 2017 \\
+\end{tabular}}%
+\nopagebreak%
+
+\filadosentres{}{%
+\begin{itemize}
+ \item Intermediary between the supplier and the client in topics related to nuclear aspects.
+ \item Consultancy regarding operational modes of CAREM-25 reactor and their implications in the Balance of Plant (BOP).
+\end{itemize}
+}
+
+\filadosentres{}{
+\begin{tabular}{rp{\anchoparrafo}}
+ \textbf{Client}   & Nucleoeléctrica Argentina S.A. \\
+ \textbf{Project}  & Specialized Nuclear Engineering Services for CNAI-II \\
+ \textbf{Location} & Buenos Aires, Argentina \\
+ \textbf{Period}   & 2014 -- 2017 \\
+\end{tabular}}%
+\nopagebreak%
+
+\filadosentres{}{%
+\begin{itemize}
+ \item Development of Reactor Physics (neutronic, thermohydraulic and control) calculation codes. 
+ \item Detailed engineering projects for Nuclear Power Plants. 
+ \item Specialist in calculations and analysis for Nuclear Reactors.
+\end{itemize}
+}
+
+% \filasep
+
+\filatresentres{2013 -- 2014}{%
+\azul{INVAP S.E.}, Nuclear Engineering Department, San Carlos de Bariloche, Argentina \\
+\emph{Undergraduate intern}
+}{\href{http://www.invap.com.ar/en/}{\includegraphics[width=0.8cm]{logos/invap}}}{-0.6cm}
+
+\filadosentres{}{%
+\begin{itemize}
+ \item Nuclear engineering thesis: \href{http://ricabib.cab.cnea.gov.ar/467/}{\emph{Conceptual Design of a Compact Nuclear Research Reactor Core.}}
+\end{itemize}
+}
+
+% \filasep
+ 
+\filatresentres{2011 -- 2014}{%
+\azul{CNEA} National Atomic Energy Commission, Bariloche Atomic Centre\\
+\emph{Scholarship -- Student}
+}{\href{http://www.cnea.gov.ar}{\includegraphics[width=0.8cm]{logos/cnea}}}{-0.6cm}
+
+\filadosentres{}{%
+\begin{itemize}
+ \item Studies carried out at the Balseiro Institute under the scholarship granted by the National Atomic Energy Commission to obtain the Nuclear Engineer title.
+\end{itemize}
 }
 
 \end{secciontrescol}
 
+% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+\begin{secciondoscol}{Grants}
+
+ \filadosendos{2011 -- 2014}{Scholarship from the National Atomic Energy Commission (CNEA) to study Nuclear Engineering at the Balseiro Institute.\\}
+
+\end{secciondoscol}
 
 % -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 \begin{secciondoscol}{Languages}
@@ -92,238 +254,26 @@ GPA: 9.20/10.
  \filadosendos{English}{Speaks, reads and writes fluently.}
 \end{secciondoscol}
 
-
 % -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{secciondoscol}{Grants}
-
- \filadosendos{2011--2014}{Scholarship from the National Atomic Energy Commission (CNEA) to study Nuclear Engineering at the Balseiro Institute.\\}
-
+\begin{secciondoscol}{Programming and Software}
+ \filadosendos{Languages}{C/C++/C\#, R, Python, FORTRAN, Scripting (bash, AWK, sed, curl, etc), \LaTeX, etc.}
+ \filadosendos{Software}{GNU Scientific Library, PETSc, SLEPc, GNU Octave, Matlab, Mathematica, git, wasora, milonga, etc.}
 \end{secciondoscol}
 
 % -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{secciondoscol}{Computer Skills}
- \filadosendos{GNU/Linux}{Advanced}
- \filadosendos{C}{Advanced}
- \filadosendos{\CC}{Intermediate}
- \filadosendos{Python}{Intermediate}
- \filadosendos{Fortran}{Intermediate}
- \filadosendos{Scripting}{Intermediate (including bash, AWK, sed, curl, etc)}
- \filadosendos{git and hg}{Advanced}
- \filadosendos{\LaTeX}{Advanced}
-\end{secciondoscol}
+\begin{secciontrescol}{Open and Private software}
 
-% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{secciontrescol}{Experience}
-
-\filatresentres{\footnotesize 2017--current}{%
-\azul{CRISIL}, Buenos Aires\\
-\emph{Senior Quant Analyst}
-}{\href{https://www.crisil.com}{\includegraphics[width=0.9cm]{logos/crisil}}}{-0.6cm}
-
-\filadosentres{}{%
-Scrutiny and testing of risk models.\\
-Understand the model scope, investment products involved and methodology in detail.\\
-Assure cutting-edge techniques for FO model testing design.
-}
-
-\filasep
-
-\filadosentres{}{
-\begin{tabular}{rp{\anchoparrafo}}
- Project & MDDT Documentation Project\\
- Client  & Tier-1 US Bank\\
- Period  & 2017--current \\
-\end{tabular}}%
-\nopagebreak%
-
-\filadosentres{}{Identify the key model assumptions and limitations in order to properly design testing cases using cutting-edge methodologies.}
-
-\filadosentres{}{Scrutiny of assumption and limitation using quantitative and statistical tools.}
-
-\filadosentres{}{Front Office testing design for derivative pricing models for vanilla and exotic derivatives, including numerical stability, consistency tests, arbitrage tests, pricing and Greek analysis, sensitivity tests, stress tests, CCAR/DFAST tests, Profit \& Loss tests, among others.}
-
-\filadosentres{}{Independently develop methodologies to challenge the model by benchmarking it with market known or alternative methods.}
-
-\filadosentres{}{Propose solution for the identified unpleasant behaviors or weaknesses, limitations or restrictions for FO models and provide relevant feedback to the Line of Business.}
-
-\filadosentres{}{Produce written summaries of research, scrutiny and assessment of testing results in fulfillment with Model Development Document standards as per regulatory requirement.}
-
-\filasep
-
-\filatresentres{\footnotesize 2017--current}{%
-\azul{BESNA}, Buenos Aires\\
-\emph{Engineering Consultant}
-}{\href{http://www.besna.com.ar}{\includegraphics[width=0.8cm]{logos/besna}}}{-0.6cm}
-
-\filadosentres{}{%
-Detail engineering projects for Nuclear Power Plants.\\
-Development of thermohydraulic calculation codes.\\
-Specialist in calculations and analysis for Nuclear Power Reactors.
-}
-
-\filasep
-
-\filadosentres{}{
-\begin{tabular}{rp{\anchoparrafo}}
- Project & Numerical Simulation of the CAREM-25 Steam Generator\\
- Client  & National Atomic Energy Commission (CNEA)\\
- Period  & 2017 \\
-\end{tabular}}%
-\nopagebreak%
-
-\filadosentres{}{Development of the \emph{mate} calculation code, implemented in C as a \emph{wasora} plugin, capable of simulating one-dimensional two-phase flow for different geometries.}
-
-\filasep
-
-\filatresentres{\footnotesize 2014--2017}{%
-\azul{TECNA} Engineering Studies and Projects, Buenos Aires\\
-\emph{S/Sr Nuclear Engineer}
-}{\href{http://www.tecna.com/Home/tabid/40/language/en-US/Default.aspx}{\includegraphics[width=0.8cm]{logos/tecna-solo}}}{-0.6cm}
-
-\filadosentres{}{%
-Detail engineering projects for Nuclear Power Plants.\\
-Development of neutronic, thermohydraulic and control calculation codes.\\
-Specialist in calculations and analysis for Nuclear Power Reactors.
-}
-
-\filasep
-
-\filadosentres{}{
-\begin{tabular}{rp{\anchoparrafo}}
- Project & CAREM-25 Balance of Plant\\
- Client  & National Atomic Energy Commission (CNEA)\\
- Period  & 2017 \\
-\end{tabular}}%
-\nopagebreak%
-
-\filadosentres{}{Intermediary between the supplier and the client in topics related to nuclear aspects.}
-\filadosentres{}{Consultancy regarding operational modes of CAREM-25 reactor and their implications in the Balance of Plant (BOP).}
-
-\filasep
-
-\filadosentres{}{
-\begin{tabular}{rp{\anchoparrafo}}
- Project & Specialized Nuclear Engineering Services for CNAI-II\\
- Client  & Nucleoeléctrica Argentina S.A.\\
- Period  & 2014--2016 \\
-\end{tabular}}%
-\nopagebreak%
-
-\filadosentres{}{Development and implementation of the Method of Characteristics (MOC) for the resolution of the neutron transport equation in the milonga code (including \emph{ray tracing} algorithms).}
-
-\filadosentres{}{Consultancy regarding neutron cell calculations for the obtention of condensed and homogenized macroscopic cross sections with DRAGON V5 lattice code in order to correctly model the doppler effect.}
-
-\filadosentres{}{Nuclear engineering developments in neutron transport (cell) or diffusion (core) and thermohydraulics in PHWR.}
-
-\filadosentres{}{Consultancy regarding spatial kinetics calculations coupled with plant and control codes.}
-
-\filadosentres{}{Consultancy regarding the development of computational codes in order to reproduce coupled safety transients and update the Final Safety Analysis Report (FSAR) for Atucha~I Nuclear Power Plant.}
-
-\filadosentres{}{Implementation of several updates for the neutron spatial kinetics programs (pcex and PCE2c).}
-
-\filadosentres{}{Version control implementation (Git and Mercurial) for all the computational codes and technical documentation.}
-
-\filadosentres{}{Implementation of DyPRA as a wasora plugin in order to increase the flexibility and traceability of executions (dypra2).}
-
-\filadosentres{}{Engineering support for the Atucha~II Nuclear Power Plant start up. Doppler coefficient determination during commissioning stage.}
-
-\filasep
-
-\filatresentres{2013--2014}{%
-\azul{INVAP S.E.} Nuclear Engineering Department, San Carlos de Bariloche \\
-\emph{Undergraduate intern}
-}{\href{http://www.invap.com.ar/en/}{\includegraphics[width=0.8cm]{logos/invap}}}{-0.6cm}
-
-% \nopagebreak
- \filadosentres{}{ 
-\begin{tabular}{rp{\anchoparrafo}}
- Project & Internship. \\ 
- Period & 2013--2014 \\
- Assignment &
-
- Nuclear engineering thesis: \href{http://ricabib.cab.cnea.gov.ar/467/}{\emph{Conceptual Design of a Compact Nuclear Research Reactor Core.}} \\
-\end{tabular}
-}
-
-\filasep
- 
-\filatresentres{2011--2014}{%
-\azul{CNEA} National Atomic Energy Commission, Bariloche Atomic Centre\\
-\emph{Scholarship -- Student}
-}{\href{http://www.cnea.gov.ar}{\includegraphics[width=0.8cm]{logos/cnea}}}{-0.6cm}
-
-\filadosentres{}{Studies carried out at the Balseiro Institute under the scholarship granted by the National Atomic Energy Commission to obtain the Nuclear Engineer title.}
-
-\end{secciontrescol}
-
-
-% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{secciontrescol}{Refereed Publications}
-
-\paper{2016}{Vignolo, R.}{Solving the neutron transport equation by the method of characteristics in milonga neutron code}{III Annual Meeting of the Argentine Reactor Calculation and Analysis Group\\XLIII Annual Meeting of the Argentine Association of Nuclear Technology}{https://bitbucket.org/rvignolo/aatn-2016-moc-milonga}{aatn-2016-3}
-
-\paper{2016}{Vignolo, R., Schivo, M.}{Doppler coefficient: Comparisons between measurements and kinetic calculations for the Atucha~II Nuclear Power Plant}{XLIII Annual Meeting of the Argentine Association of Nuclear Technology}{https://bitbucket.org/rvignolo/aatn-2016-appl-multi-xs}{aatn-2016-2}
-
-\paper{2016}{Vignolo, R., Giuntoli, G., Khatchikian, F.}{Development of multiple parameters cross sections tables in DRAGON V5 for the Atucha~II Nuclear Power Plant}{XLIII Annual Meeting of the Argentine Association of Nuclear Technology}{https://bitbucket.org/rvignolo/aatn-2016-xs-multitabla}{aatn-2016-1}
-
-\paper{2015}{Vignolo, R., San Sebastián, G.}{Implementation of routines for the extraction and insertion of fuel elements in DyPRA's suite}{XLII Annual Meeting of the Argentine Association of Nuclear Technology}{https://bitbucket.org/rvignolo/aatn-2015-ext-ins-eecc}{aatn-2015}
-
-\paper{2014}{Vignolo, R., Villarino, E.}{Conceptual Design of a Compact Nuclear Reactor Core}{XVI meeting of the International Group On Research Reactors}{http://www.igorr.com/scripts/home/publigen/content/templates/Show.asp?P=1000&L=EN}{igorr-2014}
-
-\paper{2014}{Vignolo, R., Villarino, E.}{Conceptual Design of a Compact Nuclear Research Reactor Core}{Graduate thesis at Balseiro Institute.}{http://ricabib.cab.cnea.gov.ar/467/}{tesis-ib}
-
-\end{secciontrescol}
-
-
-% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{secciontrescol}{Technical Reports}
-\input{informes-english.tex}
-\end{secciontrescol}
-
-% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{secciontrescol}{Conference presentations}
-
-\congreso{2016}{III Annual Meeting of the Argentine Reactor Calculation and Analysis Group, Buenos Aires}%
-%
-\presentacion{Vignolo, R.}{Hands on DRAGON: learning how to use DRAGON V5 for cross section production}{https://bitbucket.org/rvignolo/taller-dragon-garcar-2016}{garcar-2016-2}
-
-\presentacion{Vignolo, R.}{Solving the neutron transport equation by the method of characteristics in milonga neutron code}{https://bitbucket.org/rvignolo/aatn-2016-moc-milonga-presentacion}{garcar-2016-1}
-
-\congreso{2016}{XLIII Annual Meeting of the Argentine Association of Nuclear Technology, Buenos Aires}%
-%
-\presentacion{Vignolo, R., Giuntoli, G., Khatchikian, F.}{Development of multiple parameters cross sections tables in DRAGON V5 for Atucha~II Nuclear Power Plant}{https://bitbucket.org/rvignolo/aatn-2016-xs-multitabla-presentacion}{aatn-2016-1-pres}
-%
-\presentacion{Vignolo, R., Schivo, M.}{Doppler coefficient: Comparisons between measurements and kinetic calculations for the Atucha~II Nuclear Power Plant}{https://bitbucket.org/rvignolo/aatn-2016-appl-multi-xs-presentacion}{aatn-2016-2-pres}
-%
-\presentacion{Vignolo, R.}{Solving the neutron transport equation by the method of characteristics in milonga neutron code}{https://bitbucket.org/rvignolo/aatn-2016-moc-milonga-presentacion}{aatn-2016-3-pres}
-
-\congreso{2015}{XLII Annual Meeting of the Argentine Association of Nuclear Technology, Buenos Aires}%
-%
-\presentacion{Vignolo, R., San Sebastián, G.}{Implementation of routines for the extraction and insertion of fuel elements in DyPRA's suite}{https://bitbucket.org/seamplex/wasora}{wasora}
-
-\end{secciontrescol}
-
-
-% -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{secciontrescol}{Freen and open software}
-
-\software{wasora}{Wasora is a convenient high-level interface to perform mathematical computations. It also provides a framework which other particular computational codes can use. It is a free computational tool designed to aid a cognizant expert to analyze complex systems by solving mathematical problems by means of a high-level plain-text}{https://bitbucket.org/seamplex/wasora}
+\software{wasora}{Wasora is a convenient high-level interface to perform mathematical computations. It also provides a framework which other particular computational codes can use. It is a free computational tool designed to aid a cognizant expert to analyze complex systems by solving mathematical problems by means of a high-level plain-text}{https://github.com/seamplex/wasora}
 
 \software{milonga}{Milonga is a free core-level neutronic code that solves the steady-state multigroup neutron transport equation (using the diffusion approximation, discrete ordinates $S_N$ method or the method of characteristics) over unstructured grids (although simple structured grids can also be used) using either a finite-volumes or a finite-elements discretization scheme.}{https://bitbucket.org/rvignolo/milonga}
 
-\software{mate}{Mate is a program that solves steady-state systems involving mixtures of steam and water in different geometries. It is intended to be free and open in the short term.}{https://bitbucket.org/besna/plugin-mate}
+\software{mate}{Mate solves steady-state systems involving mixtures of steam and water (Two-Phase Flow) in different one dimensional, but still complex, geometries. Mass, Momentum, and Energy distributions are obtained through a finite difference scheme. It is intended to be free and open in the short term.}{https://github.com/rvignolo/mate}
+
+\software{kosmos}{Kosmos is a derivative pricing engine in current and active development.}{https://github.com/rvignolo/kosmos}
 
 \end{secciontrescol}
 
-
 % -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
-\begin{secciondoscol}{Advice}
- \filadosendos{2016}{Vocal Press and Communication for the Argentine Youth Nuclear Generation (AYNG).\\}
-\end{secciondoscol}
-
-% \pagebreak
-
-
 \vspace{\fill}
 \hspace{0.6\linewidth}
 \begin{minipage}{0.35\linewidth}
