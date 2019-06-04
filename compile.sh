@@ -11,7 +11,6 @@ done
 # definiciones utiles
 out="latexout"
 version=`git describe --always | sed 's/-/./'`
-# version=`hg log -r tip --template '{rev}-{date|shortdate}'`
 if [ `git status --porcelain | wc -l` -ne 0 ]; then
   delta="+"
 fi
@@ -33,28 +32,25 @@ function callbiber {
 # limpiamos el directorio
 ./clean.sh
 
-# generamos archivos utiles
-./report2latex.awk informes-tecnicos-english.bib > informes-english.tex
-./report2latex.awk informes-tecnicos-spanish.bib > informes-spanish.tex
+echo -n "creating svg and pdf auxiliary files... "
 
 # convertimos los svg
 cd logos
 ../svg2pdf.sh
 cd ..
 
-# generamos los qr
+# generamos los qr (en svg)
 cd qr
 ./qr.sh
 cd ..
+echo "ok!"
 
-for language in english spanish; do
+for language in english; do
   rm -f ${language}-${out}
   
   callxelatex ${language}
   callbiber ${language}
   callxelatex ${language}
-  
-  rm -f informes-${language}.tex
   
   cp rvignolo-${language}.pdf rvignolo-${language}-${version}${delta}.pdf
 done
@@ -62,5 +58,4 @@ done
 tput setaf 4
 echo
 echo result saved as rvignolo-english-${version}${delta}.pdf
-echo result saved as rvignolo-spanish-${version}${delta}.pdf
 tput sgr0
