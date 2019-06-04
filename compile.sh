@@ -1,6 +1,6 @@
 #!/bin/bash
 
-tools="xelatex biber hg grep wc qrencode"
+tools="xelatex biber git grep wc qrencode"
 for i in ${tools}; do
   if [ -z `which $i` ]; then
     echo "$i is not installed"
@@ -10,8 +10,9 @@ done
 
 # definiciones utiles
 out="latexout"
-version=`hg log -r tip --template '{rev}-{date|shortdate}'`
-if [ ! -z "`hg status`" ]; then
+version=`git describe --always | sed 's/-/./'`
+# version=`hg log -r tip --template '{rev}-{date|shortdate}'`
+if [ `git status --porcelain | wc -l` -ne 0 ]; then
   delta="+"
 fi
 
